@@ -14,7 +14,9 @@ function App() {
         <Route index element={<Home/>}/>
         <Route path="/country/:name" element={<Country/>}/>
       </Route>
-    )
+    ),{
+      basename: import.meta.env.DEV ? '/' : '/countries/'
+    }
   )
 
   return (
