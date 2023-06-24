@@ -3,6 +3,7 @@ import { Link, useParams } from 'react-router-dom'
 import Details from '../components/Details';
 import MainDetails from '../components/MainDetails';
 import BorderCountries from '../components/BorderCountries';
+import arrow_back from '../assets/arrow_back.svg'
 
 const Country = () => {
     const { name } = useParams()
@@ -24,7 +25,7 @@ const Country = () => {
 
     return ( 
         <main className='country'>
-            <Link className='btn-back' to='/'><img src='arrow_back.svg' alt='back'/>Back</Link>
+            <Link className='btn-back' to='/'><img src={arrow_back} alt='back'/>Back</Link>
             {country != null && (
                 <div className='row-1'>
                     <div>
